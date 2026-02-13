@@ -4,10 +4,10 @@ if [[ "$VIRTUAL_ENV" != *"odoo-venv"* ]]; then
     exit 1
 fi
 
-echo "🆙 Updating Core Tools..."
+echo "🆙 Updating Pip and Setuptools..."
 pip install --upgrade pip setuptools==67.8.0 wheel
 
-echo "🧹 Patching requirements.txt..."
+echo "🧹 Patching Odoo 17 requirements.txt..."
 cat <<EOF > odoo/requirements.txt
 Babel==2.10.3
 chardet==4.0.0
